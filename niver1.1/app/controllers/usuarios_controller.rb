@@ -44,10 +44,10 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       if @usuario.save
-        format.html { redirect_to @usuario, notice: 'Usuario was successfully created.' }
+        format.html { redirect_to @usuario, notice: 'Usuario criado com sucesso.' }
         format.json { render json: @usuario, status: :created, location: @usuario }
       else
-        format.html { render action: "new" }
+        format.html { render action: "Novo" }
         format.json { render json: @usuario.errors, status: :unprocessable_entity }
       end
     end
@@ -60,10 +60,10 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       if @usuario.update_attributes(params[:usuario])
-        format.html { redirect_to @usuario, notice: 'Usuario was successfully updated.' }
+        format.html { redirect_to @usuario, notice: 'Usuario Atualizado com sucesso.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render action: "Editar" }
         format.json { render json: @usuario.errors, status: :unprocessable_entity }
       end
     end
